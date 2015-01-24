@@ -2,21 +2,24 @@ module Main where
 
 import System.Environment
 import Text.XML.HXT.Core
--- import Text.XML.HXT.Curl
 
 
 type Anime = String
-
--- tinstance XmlPickler Anime
---  where xpickle = xpAnime
+type AnimeList = [Anime]
   
 xpAnime :: PU Anime
 xpAnime 
-  = xpElem "title" $ xpText
+  = xpElem "anime" $ xpElem "series_title" $ xpText
+
+xpAnimeList :: PU AnimeList
+xpAnimeList 
+  = xpElem "myanimelist" $ xpList $ xpAnime 
+
 
 main :: IO ()
 main = do
   [src] <- getArgs
-  runX  (xunpickleDocument xpAnime [] src)
+  a <- runX  ( xunpickleDocument xpAnimeList [ withRemoveWS yes ] src)
+  mapM print a
   return ()
 
