@@ -4,14 +4,23 @@ import System.Environment
 import Text.XML.HXT.Core
 
 
-type Anime = String
+data Anime = Anime {
+  title :: String,
+  status :: String
+} deriving Show
+
 type AnimeList = [Anime]
   
 xpAnime :: PU Anime
 xpAnime 
   = xpElem "anime" $ 
-  xpFilterCont (hasName "series_title") $ 
-  xpElem "series_title" $ xpText
+  xpFilterCont (hasName "series_title" 
+                <+> hasName "my_status") $ 
+  xpWrap ( uncurry Anime
+         , \s ->  (title s, status s)
+         ) $
+  xpPair ( xpElem "series_title" $ xpText )
+         ( xpElem "my_status" $ xpText)
 
 xpAnimeList :: PU AnimeList
 xpAnimeList 
