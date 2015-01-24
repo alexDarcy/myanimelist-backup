@@ -15,7 +15,9 @@ xpAnime
 
 xpAnimeList :: PU AnimeList
 xpAnimeList 
-  = xpElem "myanimelist" $ xpList $ xpAnime 
+  = xpElem "myanimelist" $ 
+  xpFilterCont (hasName "anime") $ 
+  xpList $ xpAnime 
 
 
 main :: IO ()
