@@ -9,7 +9,9 @@ type AnimeList = [Anime]
   
 xpAnime :: PU Anime
 xpAnime 
-  = xpElem "anime" $ xpElem "series_title" $ xpText
+  = xpElem "anime" $ 
+  xpFilterCont (hasName "series_title") $ 
+  xpElem "series_title" $ xpText
 
 xpAnimeList :: PU AnimeList
 xpAnimeList 
