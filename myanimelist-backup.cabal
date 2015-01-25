@@ -13,12 +13,17 @@ author:              Alexis Praga
 category:            Web
 build-type:          Simple
 extra-source-files:  README.md
-cabal-version:       >=1.10
+cabal-version:       >=1.18
 
 executable mal-backup
   main-is:             MyAnimeList.hs
   -- other-modules:       
   other-extensions:    OverloadedStrings, DeriveGeneric
-  build-depends:       base >=4.7 && <4.8, hxt >=9.3 && <9.4, aeson >=0.8 && <0.9, aeson-pretty >=0.7 && <0.8, bytestring >=0.10 && <0.11, text >=1.2 && <1.3
+  build-depends:       base, 
+                       hxt,
+                       aeson, 
+                       aeson-pretty, 
+                       bytestring, 
+                       text
   -- hs-source-dirs:      
   default-language:    Haskell2010
