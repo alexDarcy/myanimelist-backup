@@ -8,7 +8,8 @@ Export your list from the website to the XML format. Then run :
     ./myanimelist animelist.xml
 
 This will generate a nicely formatted JSON file containg your anime. You can then see it locally
-using the template here [anime.html](anime.html).
+using the template given in [anime.html](anime.html). An example of the
+resulting list [is available here](http://alexdarcy.github.io/myanimelist-backup).
 
 ## Compiling
 This requires the following Haskell packages :
