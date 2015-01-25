@@ -1,9 +1,9 @@
---module Main where
 {-# LANGUAGE OverloadedStrings, DeriveGeneric #-}
 
 import System.Environment
 import Text.XML.HXT.Core
 import Data.Aeson
+import Data.Aeson.Encode.Pretty
 import GHC.Generics
 import qualified Data.ByteString.Lazy as B
 
@@ -12,9 +12,10 @@ data Anime = Anime {
   status :: String
 } deriving (Show, Generic)
 
-instance ToJSON Anime 
-
 type AnimeList = [Anime]
+
+-- Create JSON type automatically
+instance ToJSON Anime 
   
 xpAnime :: PU Anime
 xpAnime 
@@ -39,8 +40,6 @@ main :: IO ()
 main = do
   [src] <- getArgs
   [a] <- runX  ( xunpickleDocument xpAnimeList [ withRemoveWS yes ] src)
-  -- mapM (print . encode) a
-  let b = encode ( a !! 0 )
-  B.writeFile "myfile.json" b
+  B.writeFile "anime.json" $ encodePretty a
   return ()
 
