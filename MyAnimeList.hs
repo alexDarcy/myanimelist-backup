@@ -49,6 +49,9 @@ main :: IO ()
 main = do
   [src] <- getArgs
   [a] <- runX  ( xunpickleDocument xpAnimeList [ withRemoveWS yes ] src)
-  B.writeFile "anime.json" $ encodePretty' myConfig a
+  let file = "anime.json"
+  writeFile file "var data ="
+  B.appendFile file $ encodePretty' myConfig a
+  appendFile file ";"
   return ()
 
