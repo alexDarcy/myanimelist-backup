@@ -1,0 +1,179 @@
+var data =[
+  {
+    "title": "Azumanga Daioh",
+    "status": "Completed"
+  },
+  {
+    "title": "Blood+",
+    "status": "Completed"
+  },
+  {
+    "title": "Bokurano",
+    "status": "Completed"
+  },
+  {
+    "title": "Boogiepop wa Warawanai: Boogiepop Phantom",
+    "status": "Completed"
+  },
+  {
+    "title": "Chikyuu Shoujo Arjuna",
+    "status": "Plan to Watch"
+  },
+  {
+    "title": "Cowboy Bebop",
+    "status": "Completed"
+  },
+  {
+    "title": "Dennou Coil",
+    "status": "Completed"
+  },
+  {
+    "title": "Dragon Ball Z Movie 14: Kami to Kami",
+    "status": "Completed"
+  },
+  {
+    "title": "Elfen Lied",
+    "status": "Completed"
+  },
+  {
+    "title": "Fate/stay night",
+    "status": "Completed"
+  },
+  {
+    "title": "FLCL",
+    "status": "Completed"
+  },
+  {
+    "title": "Ga-Rei: Zero",
+    "status": "Completed"
+  },
+  {
+    "title": "Gake no Ue no Ponyo",
+    "status": "Completed"
+  },
+  {
+    "title": "Gankutsuou",
+    "status": "Completed"
+  },
+  {
+    "title": "Ghost in the Shell",
+    "status": "Completed"
+  },
+  {
+    "title": "Ghost in the Shell 2: Innocence",
+    "status": "Completed"
+  },
+  {
+    "title": "Ghost in the Shell: Stand Alone Complex",
+    "status": "Completed"
+  },
+    {
+    "title": "Gosick",
+    "status": "Completed"
+  },
+  {
+    "title": "Heppoko Jikken Animation Excel Saga",
+    "status": "Completed"
+  },
+  {
+    "title": "Howl no Ugoku Shiro",
+    "status": "Completed"
+  },
+  {
+    "title": "Jin-Rou",
+    "status": "Completed"
+  },
+  {
+    "title": "Kareshi Kanojo no Jijou",
+    "status": "Completed"
+  },
+  {
+    "title": "Kaze no Tani no Nausicaä",
+    "status": "Completed"
+  },
+  {
+    "title": "Kiddy Grade",
+    "status": "Completed"
+  },
+  {
+    "title": "Kino no Tabi: The Beautiful World",
+    "status": "Completed"
+  },
+  {
+    "title": "Kokurikozaka kara",
+    "status": "Completed"
+  },
+  {
+    "title": "Kurau Phantom Memory",
+    "status": "Completed"
+  },
+  {
+    "title": "Kurenai no Buta",
+    "status": "Completed"
+  },
+  {
+    "title": "Last Exile",
+    "status": "Completed"
+  },
+  {
+    "title": "Mahou Shoujo Madoka★Magica",
+    "status": "Completed"
+  },
+  {
+    "title": "Majo no Takkyuubin",
+    "status": "Completed"
+  },
+  {
+    "title": "Mononoke Hime",
+    "status": "Completed"
+  },
+  {
+    "title": "Mousou Dairinin",
+    "status": "Completed"
+  },
+  {
+    "title": "Mushishi",
+    "status": "Completed"
+  },
+  {
+    "title": "Naruto",
+    "status": "Watching"
+  },
+
+  {
+    "title": "Noir",
+    "status": "Completed"
+  },
+  {
+    "title": "Perfect Blue",
+    "status": "Completed"
+  },
+  {
+    "title": "Seikai no Monshou",
+    "status": "Completed"
+  },
+  {
+    "title": "Sen to Chihiro no Kamikakushi",
+    "status": "Completed"
+  },
+  {
+    "title": "Sword Art Online",
+    "status": "Completed"
+  },
+  {
+    "title": "Tonari no Totoro",
+    "status": "Completed"
+  },
+   {
+    "title": "Uchuu no Stellvia",
+    "status": "Completed"
+  },
+  {
+    "title": "Wolf's Rain",
+    "status": "Completed"
+  },
+  {
+    "title": "X",
+    "status": "Completed"
+  }
+];
