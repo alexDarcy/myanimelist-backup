@@ -1,0 +1,60 @@
+<!DOCTYPE html>         
+<meta charset="utf-8"> 
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<body>
+  <script>
+    function insert(status) {
+      var output = "<table class=grid>";
+      output += "<tr class=title>";
+      output += "<td class=id>#</td><td class=title>Title</td><td class=status>Status</td>";
+      output += "</tr>";
+      var j = 0;
+      for (var i = 0; i < data.length; ++i) {
+        output+="<tr>";
+        if (data[i].status == status) {
+          output+="<td class=id>" + j +"</td>";
+          output+="<td class=title>" + data[i].title +"</td>";
+          output+="<td class=status>" + data[i].status +"</td>";
+          j += 1;
+        }
+        output+="</tr>";
+      }
+      output+="</table>";
+      return output;
+    }
+
+  </script>
+
+  <h1>Anime</h1>
+  <script src="anime.json" type="text/javascript"></script> 
+
+  <div id="toc"></div>
+  <div id="list"></div>
+  <script>
+
+    var allStatus = ["Watching","Plan to Watch", "Completed"];
+
+    /* Generate table of contents here */
+    var toc = "<table>";
+    for (var i = 0; i < allStatus.length; ++i) {
+      toc += "<td><a href=#" + allStatus[i].replace(/ /g, '_') + ">";
+      toc += allStatus[i] +"</td>";
+      console.log(allStatus[i].replace(/ /g, '_'));
+    }
+    toc += "</table>";
+
+    document.getElementById("toc").innerHTML=toc;
+
+    var content = "";
+    /* Generate contents here */
+    for (var i in allStatus) {
+      content += "<h2>" + allStatus[i];
+      content += "<a name=\"" + allStatus[i].replace(/ /g, '_') + "\"></a></h2>";
+      content += insert(allStatus[i]);
+    }
+    document.getElementById("list").innerHTML=content;
+    
+
+  </script>
+</body>
