@@ -41,7 +41,7 @@ xpAnimeList
 
 -- Pretty printing for output JSON : fields are sorted by keys
 comp :: T.Text -> T.Text -> Ordering
-comp = keyOrder ["foo","bar"] `mappend` comparing T.length
+comp = keyOrder ["title","status"] `mappend` comparing T.length
 
 myConfig = Config {confIndent = 2, confCompare = comp}
 
